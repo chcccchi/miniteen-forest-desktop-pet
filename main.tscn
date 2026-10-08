@@ -1,0 +1,623 @@
+[gd_scene format=3 uid="uid://d1mhg20j6su1h"]
+
+[ext_resource type="Script" uid="uid://i7uuo6w1chhp" path="res://main.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bvdvq4vfeshl0" path="res://assets/forest-strip.png" id="2_background"]
+[ext_resource type="Texture2D" uid="uid://ddvb7rgdnfome" path="res://assets/popup-art.png" id="3_popup_art"]
+[ext_resource type="Texture2D" uid="uid://37y2ehd6pgff" path="res://assets/pet-walk-1.png" id="4_pet_walk_1"]
+[ext_resource type="Texture2D" uid="uid://d0tbcn3ei1x1x" path="res://assets/pet-idle.png" id="5_raccoon_idle"]
+[ext_resource type="Texture2D" uid="uid://dxhfxo0206p8y" path="res://assets/pet-bunny-idle.png" id="6_bunny_idle"]
+[ext_resource type="Texture2D" uid="uid://duoiodqplywwi" path="res://assets/pet-bunny_calm-idle.png" id="7_calm_idle"]
+[ext_resource type="Texture2D" uid="uid://d3vwkyi2h1h5p" path="res://assets/pet-bunny_gray-idle.png" id="8_gray_idle"]
+[ext_resource type="Texture2D" uid="uid://beyixax1thhs3" path="res://assets/pet-cat_orange-idle.png" id="9_orange_idle"]
+[ext_resource type="Texture2D" uid="uid://db03s87ad1ego" path="res://assets/pet-deer-idle.png" id="10_deer_idle"]
+[ext_resource type="Texture2D" uid="uid://duekqqmrwhd2e" path="res://assets/card-slot-frame.png" id="11_card_slot"]
+[ext_resource type="Texture2D" uid="uid://vm851dvmitsm" path="res://assets/pet-7-idle.png" id="12_pet_7"]
+[ext_resource type="Texture2D" uid="uid://eppypghcyg4e" path="res://assets/pet-8-idle.png" id="13_pet_8"]
+[ext_resource type="Texture2D" uid="uid://boggmfd3vyw0x" path="res://assets/pet-9-idle.png" id="14_pet_9"]
+[ext_resource type="Texture2D" uid="uid://ddj05qdc7uax6" path="res://assets/pet-10-idle.png" id="15_pet_10"]
+[ext_resource type="Texture2D" uid="uid://biw3pvac6ukiu" path="res://assets/pet-11-idle.png" id="16_pet_11"]
+[ext_resource type="Texture2D" uid="uid://cfv3ymjpss5fb" path="res://assets/pet-12-idle.png" id="17_pet_12"]
+[ext_resource type="Texture2D" uid="uid://bvv4yixktkkf2" path="res://assets/pet-13-idle.png" id="18_pet_13"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_strip"]
+atlas = ExtResource("2_background")
+region = Rect2(0, 184, 2117, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_popup_body"]
+atlas = ExtResource("3_popup_art")
+region = Rect2(15, 15, 1744, 650)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_popup_close"]
+atlas = ExtResource("3_popup_art")
+region = Rect2(100, 675, 1574, 168)
+
+[node name="MiniteenForest" type="Control" unique_id=729062666]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 10.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="ForestStrip" type="TextureRect" parent="." unique_id=670127844]
+layout_mode = 0
+offset_right = 2117.0
+offset_bottom = 423.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_strip")
+expand_mode = 1
+
+[node name="Pet" type="TextureRect" parent="." unique_id=1811350200]
+z_index = 2
+layout_mode = 0
+offset_left = 400.0
+offset_top = 294.0
+offset_right = 601.0
+offset_bottom = 411.0
+mouse_filter = 2
+texture = ExtResource("4_pet_walk_1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PetRaccoon" type="TextureRect" parent="." unique_id=500824107]
+z_index = 2
+layout_mode = 0
+offset_left = 733.0
+offset_top = 297.0
+offset_right = 930.0
+offset_bottom = 414.0
+mouse_filter = 2
+texture = ExtResource("5_raccoon_idle")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PetCalm" type="TextureRect" parent="." unique_id=1691484283]
+z_index = 2
+layout_mode = 0
+offset_left = 1066.0
+offset_top = 298.0
+offset_right = 1266.0
+offset_bottom = 413.0
+mouse_filter = 2
+texture = ExtResource("7_calm_idle")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PetGray" type="TextureRect" parent="." unique_id=750075059]
+z_index = 2
+layout_mode = 0
+offset_left = 1273.0
+offset_top = 294.0
+offset_right = 1470.0
+offset_bottom = 411.0
+mouse_filter = 2
+texture = ExtResource("8_gray_idle")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PetOrange" type="TextureRect" parent="." unique_id=1504736695]
+z_index = 2
+layout_mode = 0
+offset_left = 494.0
+offset_top = 293.0
+offset_right = 691.0
+offset_bottom = 414.0
+mouse_filter = 2
+texture = ExtResource("9_orange_idle")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PetDeer" type="TextureRect" parent="." unique_id=789650203]
+z_index = 2
+layout_mode = 0
+offset_left = 842.0
+offset_top = 293.0
+offset_right = 1047.0
+offset_bottom = 411.0
+mouse_filter = 2
+texture = ExtResource("10_deer_idle")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pet7" type="TextureRect" parent="." unique_id=1387904407]
+z_index = 2
+layout_mode = 0
+offset_left = 239.0
+offset_top = 300.0
+offset_right = 434.0
+offset_bottom = 407.0
+mouse_filter = 2
+texture = ExtResource("12_pet_7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pet8" type="TextureRect" parent="." unique_id=1499466590]
+z_index = 2
+layout_mode = 0
+offset_left = 590.0
+offset_top = 294.0
+offset_right = 774.0
+offset_bottom = 420.0
+mouse_filter = 2
+texture = ExtResource("13_pet_8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pet9" type="TextureRect" parent="." unique_id=2143779503]
+z_index = 2
+layout_mode = 0
+offset_left = 918.0
+offset_top = 290.0
+offset_right = 1124.0
+offset_bottom = 411.0
+mouse_filter = 2
+texture = ExtResource("14_pet_9")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pet10" type="TextureRect" parent="." unique_id=1557297051]
+z_index = 2
+layout_mode = 0
+offset_left = 1369.0
+offset_top = 301.0
+offset_right = 1549.0
+offset_bottom = 416.0
+mouse_filter = 2
+texture = ExtResource("15_pet_10")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pet11" type="TextureRect" parent="." unique_id=310728946]
+z_index = 2
+layout_mode = 0
+offset_left = 1444.0
+offset_top = 294.0
+offset_right = 1633.0
+offset_bottom = 418.0
+mouse_filter = 2
+texture = ExtResource("16_pet_11")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pet12" type="TextureRect" parent="." unique_id=1129681393]
+z_index = 2
+layout_mode = 0
+offset_left = 663.0
+offset_top = 297.0
+offset_right = 850.0
+offset_bottom = 418.0
+mouse_filter = 2
+texture = ExtResource("17_pet_12")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pet13" type="TextureRect" parent="." unique_id=61938959]
+z_index = 2
+layout_mode = 0
+offset_left = 722.0
+offset_top = 286.0
+offset_right = 928.0
+offset_bottom = 417.0
+mouse_filter = 2
+texture = ExtResource("18_pet_13")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HouseButton" type="Button" parent="." unique_id=1504702593]
+layout_mode = 0
+offset_left = 1793.0
+offset_top = 70.0
+offset_right = 2066.0
+offset_bottom = 286.0
+tooltip_text = "森林小屋"
+focus_mode = 0
+flat = true
+
+[node name="FlagButton" type="Button" parent="." unique_id=41340295]
+layout_mode = 0
+offset_left = 1880.0
+offset_right = 2010.0
+offset_bottom = 95.0
+tooltip_text = "切换置顶 / 置底"
+focus_mode = 0
+flat = true
+
+[node name="BirdExitButton" type="Button" parent="." unique_id=1618454838]
+layout_mode = 0
+offset_left = 1596.0
+offset_top = 179.0
+offset_right = 1718.0
+offset_bottom = 265.0
+focus_mode = 0
+flat = true
+
+[node name="CoinButton" type="Button" parent="." unique_id=573537449]
+layout_mode = 0
+offset_left = 1726.0
+offset_top = 332.0
+offset_right = 1926.0
+offset_bottom = 403.0
+tooltip_text = "统计"
+focus_mode = 0
+flat = true
+
+[node name="Popup" type="Control" parent="." unique_id=2030648179]
+z_index = 10
+anchors_preset = 0
+offset_left = 1243.0
+offset_top = 41.0
+offset_right = 2030.0
+offset_bottom = 339.0
+mouse_filter = 2
+
+[node name="PopupArt" type="TextureRect" parent="Popup" unique_id=817945056]
+layout_mode = 0
+offset_left = -463.0
+offset_top = -38.0
+offset_right = 337.0
+offset_bottom = 260.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_popup_body")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Popup" unique_id=1081099295]
+layout_mode = 0
+offset_left = -369.0
+offset_top = 64.0
+offset_right = 211.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0.28, 0.16, 0.12, 1)
+theme_override_font_sizes/font_size = 26
+text = "森林小屋"
+
+[node name="Body" type="Label" parent="Popup" unique_id=656124421]
+layout_mode = 0
+offset_left = -363.0
+offset_top = 113.0
+offset_right = 217.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0.35, 0.25, 0.18, 1)
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2
+
+[node name="ReleasedStatus" type="Label" parent="Popup" unique_id=1627185082]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 112.0
+offset_right = 235.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(0.35, 0.25, 0.18, 1)
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 2
+
+[node name="Close" type="TextureButton" parent="Popup" unique_id=365849157]
+layout_mode = 0
+offset_left = -336.0
+offset_top = 272.0
+offset_right = 174.0
+offset_bottom = 327.0
+texture_normal = SubResource("AtlasTexture_popup_close")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CloseText" type="Label" parent="Popup/Close" unique_id=1745503656]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -3.0
+offset_right = -2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.35, 0.21, 0.12, 1)
+theme_override_font_sizes/font_size = 20
+text = "关闭"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RaccoonSlot" type="TextureRect" parent="Popup" unique_id=2037690771]
+z_index = 2
+layout_mode = 0
+offset_left = -390.0
+offset_top = 165.0
+offset_right = -250.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="BunnySlot" type="TextureRect" parent="Popup" unique_id=224553522]
+z_index = 2
+layout_mode = 0
+offset_left = -250.0
+offset_top = 165.0
+offset_right = -110.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CalmSlot" type="TextureRect" parent="Popup" unique_id=519675187]
+z_index = 2
+layout_mode = 0
+offset_left = -110.0
+offset_top = 165.0
+offset_right = 30.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="GraySlot" type="TextureRect" parent="Popup" unique_id=1396382325]
+z_index = 2
+layout_mode = 0
+offset_left = 30.0
+offset_top = 165.0
+offset_right = 170.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="OrangeSlot" type="TextureRect" parent="Popup" unique_id=1557958441]
+z_index = 2
+layout_mode = 0
+offset_left = 179.0
+offset_top = 163.0
+offset_right = 319.0
+offset_bottom = 233.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="DeerSlot" type="TextureRect" parent="Popup" unique_id=954012718]
+z_index = 2
+layout_mode = 0
+offset_left = 310.0
+offset_top = 165.0
+offset_right = 450.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RaccoonCard" type="TextureButton" parent="Popup" unique_id=1142968401]
+layout_mode = 0
+offset_left = -375.0
+offset_top = 169.0
+offset_right = -235.0
+offset_bottom = 239.0
+texture_normal = ExtResource("5_raccoon_idle")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BunnyCard" type="TextureButton" parent="Popup" unique_id=241849850]
+layout_mode = 0
+offset_left = -245.0
+offset_top = 169.0
+offset_right = -105.0
+offset_bottom = 239.0
+texture_normal = ExtResource("6_bunny_idle")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CalmCard" type="TextureButton" parent="Popup" unique_id=1777102980]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 166.0
+offset_right = 183.0
+offset_bottom = 236.0
+texture_normal = ExtResource("7_calm_idle")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="GrayCard" type="TextureButton" parent="Popup" unique_id=1448107600]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 173.0
+offset_right = 477.0
+offset_bottom = 242.0
+texture_normal = ExtResource("8_gray_idle")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="OrangeCard" type="TextureButton" parent="Popup" unique_id=1284535242]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 166.0
+offset_right = 345.0
+offset_bottom = 238.0
+texture_normal = ExtResource("9_orange_idle")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DeerCard" type="TextureButton" parent="Popup" unique_id=1608959066]
+layout_mode = 0
+offset_left = -94.0
+offset_top = 166.0
+offset_right = 41.0
+offset_bottom = 239.0
+texture_normal = ExtResource("10_deer_idle")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Pet7Slot" type="TextureRect" parent="Popup" unique_id=1445898492]
+z_index = 2
+layout_mode = 0
+offset_left = -390.0
+offset_top = 165.0
+offset_right = -250.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pet8Slot" type="TextureRect" parent="Popup" unique_id=1889439028]
+z_index = 2
+layout_mode = 0
+offset_left = -250.0
+offset_top = 165.0
+offset_right = -110.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pet9Slot" type="TextureRect" parent="Popup" unique_id=2145500497]
+z_index = 2
+layout_mode = 0
+offset_left = -110.0
+offset_top = 165.0
+offset_right = 30.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pet10Slot" type="TextureRect" parent="Popup" unique_id=1845056478]
+z_index = 2
+layout_mode = 0
+offset_left = 30.0
+offset_top = 165.0
+offset_right = 170.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pet11Slot" type="TextureRect" parent="Popup" unique_id=666355232]
+z_index = 2
+layout_mode = 0
+offset_left = -390.0
+offset_top = 165.0
+offset_right = -250.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pet12Slot" type="TextureRect" parent="Popup" unique_id=1052823999]
+z_index = 2
+layout_mode = 0
+offset_left = -250.0
+offset_top = 165.0
+offset_right = -110.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pet13Slot" type="TextureRect" parent="Popup" unique_id=1548028590]
+z_index = 2
+layout_mode = 0
+offset_left = -110.0
+offset_top = 165.0
+offset_right = 30.0
+offset_bottom = 235.0
+mouse_filter = 2
+texture = ExtResource("11_card_slot")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Pet7Card" type="TextureButton" parent="Popup" unique_id=194267845]
+layout_mode = 0
+texture_normal = ExtResource("12_pet_7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Pet8Card" type="TextureButton" parent="Popup" unique_id=1106258271]
+layout_mode = 0
+texture_normal = ExtResource("13_pet_8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Pet9Card" type="TextureButton" parent="Popup" unique_id=937005311]
+layout_mode = 0
+texture_normal = ExtResource("14_pet_9")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Pet10Card" type="TextureButton" parent="Popup" unique_id=1307407417]
+layout_mode = 0
+texture_normal = ExtResource("15_pet_10")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Pet11Card" type="TextureButton" parent="Popup" unique_id=711783696]
+layout_mode = 0
+texture_normal = ExtResource("16_pet_11")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Pet12Card" type="TextureButton" parent="Popup" unique_id=807201866]
+layout_mode = 0
+texture_normal = ExtResource("17_pet_12")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Pet13Card" type="TextureButton" parent="Popup" unique_id=2034935038]
+layout_mode = 0
+texture_normal = ExtResource("18_pet_13")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ScrollTrack" type="ColorRect" parent="Popup" unique_id=182945345]
+layout_mode = 0
+offset_left = -390.0
+offset_top = 246.0
+offset_right = 170.0
+offset_bottom = 252.0
+mouse_filter = 2
+color = Color(0.45, 0.28, 0.14, 0.55)
+
+[node name="ScrollThumb" type="ColorRect" parent="Popup" unique_id=96284134]
+layout_mode = 0
+offset_left = -390.0
+offset_top = 244.0
+offset_right = -17.0
+offset_bottom = 254.0
+mouse_filter = 2
+color = Color(0.94, 0.67, 0.31, 1)
+
+[node name="ScrollLeftIcon" type="Label" parent="Popup" unique_id=606180016]
+layout_mode = 0
+offset_left = -400.0
+offset_top = 173.0
+offset_right = -368.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0.35, 0.21, 0.12, 1)
+theme_override_font_sizes/font_size = 22
+text = "◀"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollRightIcon" type="Label" parent="Popup" unique_id=1327050181]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 166.0
+offset_right = 275.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0.35, 0.21, 0.12, 1)
+theme_override_font_sizes/font_size = 22
+text = "▶"
+horizontal_alignment = 1
+vertical_alignment = 1
