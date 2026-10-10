@@ -4,6 +4,12 @@
 
 ![桌面宠物运行效果](preview.png)
 
+## Windows 下载
+
+**[下载 Windows 便携版 v1.0](https://github.com/chcccchi/miniteen-forest-desktop-pet/releases/tag/v1.0)**
+
+下载后请先解压 ZIP，并保持文件夹完整；双击 `Launch Desktop Pet.bat` 即可运行。首次启动时 Windows 可能因未签名显示 SmartScreen 提示。
+
 ## 核心玩法
 
 - 记录键盘输入次数，并按规则换算金币。
@@ -18,7 +24,7 @@
 - 通过实际使用调整金币产出速度和阶段目标，避免目标过快完成或长期缺少反馈。
 - 使用 AI 辅助拆解实现任务、定位报错；由我负责需求判断、测试复现、方案筛选和回归验证。
 
-## 运行方式
+## 源码运行方式
 
 1. 下载并解压 `project-source.zip`。
 2. 使用 Godot 4.7 或兼容版本打开其中的 `project.godot`。
@@ -29,11 +35,3 @@
 
 - `main.gd`：主要逻辑。
 - `main.tscn`：主场景与界面节点。
-- `assets/`：宠物、场景和功能界面素材。
-- `pomodoro-feature-report.md`：番茄钟功能的设计与实现记录。
-- `project-source.zip`：包含全部素材的完整 Godot 工程源码包。
-
-## 项目状态
-
-这是用于验证桌面陪伴与养成循环的个人原型，并非完整商业产品。仓库不包含导出构建、Godot 缓存和本机编辑器文件。
-
